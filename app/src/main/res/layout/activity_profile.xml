@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee">
+
+    <ImageView
+        android:id="@+id/ic_photo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#C3C3C3"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="H,3:2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars"
+        android:contentDescription="@string/dog_s_photo" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_photo"
+        app:layout_constraintVertical_bias="0.25">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="34sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Pablo" />
+
+            <ImageView
+                android:id="@+id/ic_localisation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/location_icon"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_location_on_24"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+            <TextView
+                android:id="@+id/localisation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_localisation"
+                app:layout_constraintStart_toEndOf="@id/ic_localisation"
+                app:layout_constraintTop_toTopOf="@id/ic_localisation"
+                tools:text="C.H.U. Charles Nicoles" />
+
+            <ImageView
+                android:id="@+id/ic_breed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/pet_icon"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_pets_24"
+                app:layout_constraintStart_toStartOf="@id/ic_localisation"
+                app:layout_constraintTop_toBottomOf="@id/ic_localisation" />
+
+            <TextView
+                android:id="@+id/breed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_breed"
+                app:layout_constraintStart_toEndOf="@id/ic_breed"
+                app:layout_constraintTop_toTopOf="@id/ic_breed"
+                tools:text="French Bulldog" />
+
+            <ImageView
+                android:id="@+id/ic_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/cake_icon"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_cake_24"
+                app:layout_constraintStart_toStartOf="@id/ic_breed"
+                app:layout_constraintTop_toBottomOf="@id/ic_breed" />
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_age"
+                app:layout_constraintStart_toEndOf="@id/ic_age"
+                app:layout_constraintTop_toTopOf="@id/ic_age"
+                tools:text="9 years old" />
+
+            <ImageView
+                android:id="@+id/ic_social"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/waving_hand_icon"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_waving_hand_24"
+                app:layout_constraintStart_toStartOf="@id/ic_age"
+                app:layout_constraintTop_toBottomOf="@id/ic_age" />
+
+            <TextView
+                android:id="@+id/social"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_social"
+                app:layout_constraintStart_toEndOf="@id/ic_social"
+                app:layout_constraintTop_toTopOf="@id/ic_social"
+                tools:text="You can pet me !" />
+
+            <ImageView
+                android:id="@+id/ic_other_dogs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/social_icon"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_groups_24"
+                app:layout_constraintStart_toStartOf="@id/ic_social"
+                app:layout_constraintTop_toBottomOf="@id/ic_social" />
+
+            <TextView
+                android:id="@+id/other_dogs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_other_dogs"
+                app:layout_constraintStart_toEndOf="@id/ic_other_dogs"
+                app:layout_constraintTop_toTopOf="@id/ic_other_dogs"
+                tools:text="I don't care about other dogs" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
